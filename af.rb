@@ -1,3 +1,7 @@
+#!/usr/bin/env ruby
+
+require "cytoplasm/afshell"
+
 if ARGV.length.to_i==0
     puts " "
     puts "             ,,,,,,,,"
@@ -31,7 +35,7 @@ if ARGV.length.to_i==0
     input=gets.chomp
     command, parameter=input.split(" ")
   
-    current_afShell=afshell.new(command, parameter)
+    current_afShell=AFshell.new(command, parameter)
     current_afShell.execute_command()
   end
   
